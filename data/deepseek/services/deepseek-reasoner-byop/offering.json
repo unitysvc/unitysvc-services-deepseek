@@ -2,11 +2,11 @@
   "currency": "USD",
   "description": "Deepseek Reasoner language model",
   "details": {
-    "contextLength": 128000,
+    "contextLength": 131072,
     "litellm_provider": "deepseek",
-    "max_input_tokens": 128000,
-    "max_output_tokens": 8192,
-    "max_tokens": 8192,
+    "max_input_tokens": 131072,
+    "max_output_tokens": 65536,
+    "max_tokens": 65536,
     "mode": "chat",
     "object": "model",
     "owned_by": "deepseek"
