@@ -1,13 +1,6 @@
 {
   "currency": "USD",
   "documents": {
-    "How to use this model": {
-      "category": "getting_started",
-      "file_path": "../../docs/description.md",
-      "is_active": true,
-      "is_public": true,
-      "mime_type": "markdown"
-    },
     "JavaScript code example": {
       "category": "code_example",
       "description": "Example code to use the model",
@@ -50,12 +43,12 @@
   },
   "schema": "listing_v1",
   "service_options": {
-    "default_parameters": {
+    "ops_testing_parameters": {
       "api_key": "${ secrets.DEEPSEEK_API_KEY }"
     }
   },
   "status": "ready",
-  "time_created": "2026-01-26T02:53:44.372Z",
+  "time_created": "2026-01-31T20:03:39.127626Z",
   "user_access_interfaces": {
     "Provider API": {
       "access_method": "http",
