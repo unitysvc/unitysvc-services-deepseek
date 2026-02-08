@@ -1,0 +1,15 @@
+API request failed: TypeError: Failed to parse URL from undefined/chat/completions
+    at node:internal/deps/undici/undici:14900:13
+    at async main (/private/var/folders/3t/6zn56c697wnc1fcm0w9fkjk40000gn/T/tmpao3nhxxs.js:7:22) {
+  [cause]: TypeError: Invalid URL
+      at new URL (node:internal/url:806:29)
+      at new Request (node:internal/deps/undici/undici:9776:25)
+      at fetch (node:internal/deps/undici/undici:10505:25)
+      at fetch (node:internal/deps/undici/undici:14898:10)
+      at fetch (node:internal/bootstrap/web/exposed-window-or-worker:72:12)
+      at main (/private/var/folders/3t/6zn56c697wnc1fcm0w9fkjk40000gn/T/tmpao3nhxxs.js:7:28)
+      at Object.<anonymous> (/private/var/folders/3t/6zn56c697wnc1fcm0w9fkjk40000gn/T/tmpao3nhxxs.js:29:1)
+      at Module._compile (node:internal/modules/cjs/loader:1521:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+      at Module.load (node:internal/modules/cjs/loader:1266:32) {
+    code: 'ERR_INVALID_U

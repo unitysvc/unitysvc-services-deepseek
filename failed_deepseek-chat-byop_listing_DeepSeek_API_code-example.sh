@@ -2,7 +2,7 @@ curl "$UNITYSVC_BASE_URL/chat/completions" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $UNITYSVC_API_KEY" \
   -d '{
-    "model": "{{offering.name}}",
+    "model": "deepseek-chat",
     "messages": [
       {
         "role": "system",

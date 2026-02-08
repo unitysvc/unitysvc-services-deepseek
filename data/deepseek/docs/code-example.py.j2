@@ -3,7 +3,7 @@ import os
 
 client = OpenAI(
     api_key=os.environ.get("UNITYSVC_API_KEY"),
-    base_url=os.environ.get("base_url")
+    base_url=os.environ.get("UNITYSVC_BASE_URL")
 )
 
 completion = client.chat.completions.create(
