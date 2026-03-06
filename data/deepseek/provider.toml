@@ -1,0 +1,15 @@
+contact_email = "service@deepseek.com"
+homepage = "https://www.deepseek.com/"
+name = "deepseek"
+display_name = "DeepSeek"
+schema = "provider_v1"
+status = "ready"
+terms_of_service = "https://cdn.deepseek.com/policies/en-US/deepseek-terms-of-use.html"
+time_created = "2025-08-28T00:00:00Z"
+
+[services_populator]
+command = 'scripts/update_services.py'
+requirements = ['any-llm-sdk[deepseek]', 'requests', 'unitysvc-services']
+
+[services_populator.envs]
+# API key should be provided via DEEPSEEK_API_KEY environment variable
