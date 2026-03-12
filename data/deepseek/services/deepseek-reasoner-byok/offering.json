@@ -32,9 +32,12 @@
   "upstream_access_interfaces": {
     "DeepSeek API": {
       "access_method": "http",
-      "base_url": "https://api.deepseek.com",
       "api_key": "${ customer_secrets.DEEPSEEK_API_KEY }",
-      "rate_limits": []
+      "base_url": "https://api.deepseek.com",
+      "rate_limits": [],
+      "routing_key": {
+        "model": "deepseek-reasoner"
+      }
     }
   }
 }
