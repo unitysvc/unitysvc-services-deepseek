@@ -50,11 +50,6 @@
     "type": "one_million_tokens"
   },
   "schema": "listing_v1",
-  "service_options": {
-    "ops_testing_parameters": {
-      "api_key": "${ secrets.DEEPSEEK_API_KEY }"
-    }
-  },
   "status": "ready",
   "time_created": "2026-01-31T20:03:39.127626Z",
   "user_access_interfaces": {
@@ -64,30 +59,6 @@
       "routing_key": {
         "model": "deepseek-reasoner"
       }
-    }
-  },
-  "user_parameters_schema": {
-    "description": "Access service with your own api-key",
-    "properties": {
-      "api_key": {
-        "default": "",
-        "title": "API Key (DEEPSEEK_API_KEY)",
-        "type": "string"
-      }
-    },
-    "required": [
-      "api_key"
-    ],
-    "title": "Be Your Own Provider",
-    "type": "object"
-  },
-  "user_parameters_ui_schema": {
-    "api_key": {
-      "ui:description": "Your API key will be securely stored as secret 'DEEPSEEK_API_KEY'",
-      "ui:options": {
-        "secret": "DEEPSEEK_API_KEY"
-      },
-      "ui:placeholder": "Enter your API key"
     }
   }
 }

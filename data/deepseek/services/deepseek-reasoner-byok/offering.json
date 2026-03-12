@@ -33,6 +33,7 @@
     "DeepSeek API": {
       "access_method": "http",
       "base_url": "https://api.deepseek.com",
+      "api_key": "${ customer_secrets.DEEPSEEK_API_KEY }",
       "rate_limits": []
     }
   }
