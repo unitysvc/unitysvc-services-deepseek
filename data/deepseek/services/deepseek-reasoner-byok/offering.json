@@ -1,4 +1,7 @@
 {
+  "capabilities": [
+    "llm"
+  ],
   "currency": "USD",
   "description": "Deepseek Reasoner language model",
   "details": {
@@ -14,10 +17,10 @@
   "display_name": "Deepseek Reasoner",
   "name": "deepseek-reasoner",
   "payout_price": {
-    "description": "Pricing Per 1M Tokens Input/Output",
-    "input": "0.28",
-    "output": "0.42",
-    "reference": null,
+    "cached_input": "0",
+    "description": "Service provider charges $0.28 / $0.42 / $0.028 per 1M input/output/cached tokens",
+    "input": "0",
+    "output": "0",
     "type": "one_million_tokens"
   },
   "schema": "offering_v1",
