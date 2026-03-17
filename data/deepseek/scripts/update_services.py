@@ -89,10 +89,10 @@ class ModelSource:
         pricing = None
         if model_data:
             if "input_cost_per_token" in model_data and "output_cost_per_token" in model_data:
-                input_price = float(
-                    model_data["input_cost_per_token"]) * 1_000_000
-                output_price = float(
-                    model_data["output_cost_per_token"]) * 1_000_000
+                input_price = round(float(
+                    model_data["input_cost_per_token"]) * 1_000_000, 4)
+                output_price = round(float(
+                    model_data["output_cost_per_token"]) * 1_000_000, 4)
                 price_desc = (
                     f"Service provider charges "
                     f"${self._format_price(input_price)} / "
@@ -107,8 +107,8 @@ class ModelSource:
                 }
                 # Include cached_input if available
                 if "cache_read_input_token_cost" in model_data:
-                    cached_price = float(
-                        model_data["cache_read_input_token_cost"]) * 1_000_000
+                    cached_price = round(float(
+                        model_data["cache_read_input_token_cost"]) * 1_000_000, 4)
                     pricing["cached_input"] = "0"
                     price_desc = (
                         f"Service provider charges "
