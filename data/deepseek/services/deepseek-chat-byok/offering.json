@@ -33,7 +33,7 @@
   ],
   "time_created": "2026-01-31T20:03:39.125180Z",
   "upstream_access_config": {
-    "DeepSeek API": {
+    "deepseek_api": {
       "access_method": "http",
       "api_key": "${ customer_secrets.DEEPSEEK_API_KEY }",
       "base_url": "https://api.deepseek.com",
