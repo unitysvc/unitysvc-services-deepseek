@@ -6,7 +6,12 @@
   "description": "Deepseek V4 Pro language model",
   "details": {
     "object": "model",
-    "owned_by": "deepseek"
+    "owned_by": "deepseek",
+    "metadata_sources": {
+      "context_length": "openrouter"
+    },
+    "context_length": 1048576,
+    "parameter_count": null
   },
   "display_name": "Deepseek V4 Pro",
   "name": "deepseek-v4-pro",
