@@ -5,12 +5,12 @@
   "currency": "USD",
   "description": "Deepseek V4 Flash language model",
   "details": {
-    "object": "model",
-    "owned_by": "deepseek",
+    "context_length": 1048576,
     "metadata_sources": {
       "context_length": "openrouter"
     },
-    "context_length": 1048576,
+    "object": "model",
+    "owned_by": "deepseek",
     "parameter_count": null
   },
   "display_name": "Deepseek V4 Flash",
