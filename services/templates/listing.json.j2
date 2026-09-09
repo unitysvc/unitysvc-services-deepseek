@@ -55,7 +55,7 @@
       Anything specific to one service goes in a SIBLING key beside the
       sentinel: `expand_presets` merges siblings over the expanded mapping,
       so a listing can add a document the collection cannot derive, or
-      replace one it generated, by title. DeepSeek needs none. -#}
+      replace one it generated, by title. -#}
   "documents": {
     "$llm_example_collection": {
       "capabilities": {{ (["chat", "image-text-to-text"] if is_vision else ["chat"]) | tojson }},
@@ -65,6 +65,32 @@
       "upstream_dialect": "openai",
       "tools": true,
       "sleep": 5
+    },
+    {#- Billing-verification coverage (unitysvc#1522 / #2093): declares
+        `min_expected_metrics` on both the connectivity_test and one
+        code_example, so the backend's Redis expect-and-pop check confirms
+        each request actually produced a metered usage event (this BYOK
+        bundle meters bytes, not tokens — `bytes_out` is the floor). Backend
+        verification is scoped to every `_DIAGNOSTIC_CATEGORIES` entry
+        (connectivity_test AND code_example), not just the connectivity
+        probe, so declaring it here on a code_example is deliberate — it
+        catches billing gaps in usage patterns (streaming, here) that the
+        single generic connectivity probe never exercises. Verified live
+        against staging: a wrong/impossible floor correctly fails with
+        `metric_below_floor:<name>` and real observed metrics. -#}
+    "Connectivity test": {
+      "$doc_preset": "llm_connectivity",
+      "meta": {
+        "sleep_after_test": 5,
+        "min_expected_metrics": {"bytes_out": 1}
+      }
+    },
+    "Python code example (streaming, openai SDK)": {
+      "$doc_preset": "llm_code_example_streaming_openai",
+      "meta": {
+        "sleep_after_test": 5,
+        "min_expected_metrics": {"bytes_out": 1}
+      }
     }
   }
 }
