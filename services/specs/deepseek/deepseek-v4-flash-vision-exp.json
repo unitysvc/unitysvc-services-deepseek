@@ -33,6 +33,6 @@
     "pricing_note": "$0.44 / $1.32 / $0.014 per 1M input/output/cached tokens",
     "provider_display_name": "DeepSeek",
     "service_type": "llm",
-    "status": "ready"
+    "status": "deprecated"
   }
 }

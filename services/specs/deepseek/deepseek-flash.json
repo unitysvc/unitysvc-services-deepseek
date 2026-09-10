@@ -1,22 +1,14 @@
 {
   "parameters": {
     "api_base_url": "https://api.deepseek.com",
-    "description": "Deepseek V4 Flash language model",
+    "description": "Deepseek Flash language model",
     "details": {
-      "context_length": 1048576,
-      "litellm_provider": "deepseek",
-      "max_input_tokens": 1000000,
-      "max_output_tokens": 393216,
-      "max_tokens": 393216,
-      "metadata_sources": {
-        "context_length": "openrouter"
-      },
-      "mode": "chat",
+      "context_length": null,
       "object": "model",
       "owned_by": "deepseek",
       "parameter_count": null
     },
-    "display_name": "Deepseek V4 Flash",
+    "display_name": "Deepseek Flash",
     "env_api_key_name": "DEEPSEEK_API_KEY",
     "is_vision": false,
     "list_price": {
@@ -24,15 +16,15 @@
       "price": "0",
       "type": "constant"
     },
-    "offering_name": "deepseek-v4-flash",
+    "offering_name": "deepseek-flash",
     "payout_price": {
       "description": "Free (BYOK)",
       "price": "0",
       "type": "constant"
     },
-    "pricing_note": "$0.44 / $1.32 / $0.014 per 1M input/output/cached tokens",
+    "pricing_note": null,
     "provider_display_name": "DeepSeek",
     "service_type": "llm",
-    "status": "deprecated"
+    "status": "ready"
   }
 }
